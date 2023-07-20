@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviewers",
+  "info": {
+    "singularName": "reviewer",
+    "pluralName": "reviewers",
+    "displayName": "reviewer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "user_admin": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "employees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::employee.employee",
+      "mappedBy": "reviewer"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "reviewers"
+    }
+  }
+}

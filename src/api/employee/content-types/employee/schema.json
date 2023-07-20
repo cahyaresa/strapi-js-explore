@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "richtext"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "employee"
+    },
+    "reviewer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reviewer.reviewer",
+      "inversedBy": "employees"
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "employees"
+    }
+  }
+}
