@@ -40,6 +40,11 @@
       "relation": "oneToOne",
       "target": "api::branch.branch",
       "inversedBy": "article"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
     }
   }
 }

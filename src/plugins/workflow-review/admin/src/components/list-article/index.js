@@ -11,13 +11,14 @@ function listArticle() {
 
     async function testData() {
         const data = await get('/workflow-review/all-article');
-        setArticleData(data);
+        setArticleData(data.data);
     }
 
     useEffect(() => {
         testData();
     }, [])
 
+    // @ts-ignore
     console.log(articleData);
 
     const ROW_COUNT = 6;
@@ -36,7 +37,8 @@ function listArticle() {
         });
     }
 
-    const articles = [];
+    // articleData.map((data) => console.log(data));
+
 
 
     return (
