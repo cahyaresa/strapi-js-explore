@@ -3,6 +3,7 @@ import pluginPkg from '../../package.json';
 import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
+import RightSideComponent from './components/RightSideComponent';
 
 const name = pluginPkg.strapi.name;
 
@@ -36,7 +37,12 @@ export default {
     });
   },
 
-  bootstrap(app) {},
+  bootstrap(app) {
+    app.injectContentManagerComponent('editView', 'right-links', {
+      name: 'RightSideComponent',
+      Component: RightSideComponent,
+    });
+  },
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
       locales.map((locale) => {

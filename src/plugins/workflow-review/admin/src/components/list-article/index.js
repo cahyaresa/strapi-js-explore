@@ -21,8 +21,8 @@ function listArticle() {
     // @ts-ignore
     console.log(articleData);
 
-    const ROW_COUNT = 6;
-    const COL_COUNT = 10;
+    // const ROW_COUNT = 6;
+    // const COL_COUNT = 10;
     const entry = {
         cover: 'https://avatars.githubusercontent.com/u/3874873?v=4',
         description: 'Chez Léon is a human sized Parisian',
@@ -37,8 +37,10 @@ function listArticle() {
         });
     }
 
-    // articleData.map((data) => console.log(data));
+    articleData.map((data) => console.log(data));
 
+    const ROW_COUNT = articleData.length;
+    const COL_COUNT = 10;
 
 
     return (
@@ -54,16 +56,10 @@ function listArticle() {
                             <Typography variant="sigma">ID</Typography>
                         </Th>
                         <Th action={undefined}>
-                            <Typography variant="sigma">Cover</Typography>
+                            <Typography variant="sigma">Name</Typography>
                         </Th>
                         <Th action={undefined}>
-                            <Typography variant="sigma">Description</Typography>
-                        </Th>
-                        <Th action={undefined}>
-                            <Typography variant="sigma">Categories</Typography>
-                        </Th>
-                        <Th action={undefined}>
-                            <Typography variant="sigma">Contact</Typography>
+                            <Typography variant="sigma">Content</Typography>
                         </Th>
                         <Th action={undefined}>
                             <VisuallyHidden>Actions</VisuallyHidden>
@@ -71,24 +67,18 @@ function listArticle() {
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {entries.map(entry => <Tr key={entry.id}>
-                        {/* <Td>
-                                <BaseCheckbox aria-label={`Select ${entry.contact}`} />
-                            </Td> */}
+                    {articleData.map(entry => <Tr key={entry.id}>
+                        <Td>
+                                {/* <BaseCheckbox aria-label={`Select ${entry.contact}`} /> */}
+                        </Td>
                         <Td>
                             <Typography textColor="neutral800">{entry.id}</Typography>
                         </Td>
                         <Td>
-                            <AvatarGroup src={entry.cover} alt={entry.contact} />
+                            <Typography textColor="neutral800">{entry.name}</Typography>
                         </Td>
                         <Td>
-                            <Typography textColor="neutral800">{entry.description}</Typography>
-                        </Td>
-                        <Td>
-                            <Typography textColor="neutral800">{entry.category}</Typography>
-                        </Td>
-                        <Td>
-                            <Typography textColor="neutral800">{entry.contact}</Typography>
+                            <Typography textColor="neutral800">{entry.content}</Typography>
                         </Td>
                         <Td>
                             <Flex>
