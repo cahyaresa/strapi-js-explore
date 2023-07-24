@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workflows",
+  "info": {
+    "singularName": "workflow",
+    "pluralName": "workflows",
+    "displayName": "workflow",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "comment": {
+      "type": "richtext"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "TODO",
+        "IN_REVIEW",
+        "DONE"
+      ],
+      "default": "TODO",
+      "required": true
+    }
+  }
+}

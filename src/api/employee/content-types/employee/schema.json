@@ -40,6 +40,11 @@
       "relation": "manyToOne",
       "target": "api::branch.branch",
       "inversedBy": "employees"
+    },
+    "role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

@@ -7,7 +7,7 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register(/*{ strapi }*/) { },
 
   /**
    * An asynchronous bootstrap function that runs before
@@ -31,17 +31,17 @@ module.exports = {
           });
 
           // console.log("entryS", entries.map((entry) => entry.branch.id));
-          console.log("user", user);
+          // console.log("user", user);
           return {
-            "branch.id" : {
+            "branch.id": {
               $in: entries.map((entry) => entry.branch.id)
             }
           }
 
-            // return user.email.includes(".com")
+          // return user.email.includes(".com")
         }
       }
-    ] 
+    ]
     await strapi.admin.services.permission.conditionProvider.registerMany(conditions);
   },
 };

@@ -1,3 +1,7 @@
 'use strict';
 
-module.exports = {};
+const workflow = require("./workflow");
+
+module.exports = {
+    workflow,
+};

@@ -12,6 +12,6 @@ module.exports = ({ strapi }) => ({
     ctx.body = await strapi
       .plugin("workflow-review")
       .service("myService")
-      .getAllArticle(); 
+      .getAllArticle();
   }
 });
