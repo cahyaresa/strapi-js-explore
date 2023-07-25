@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_shared_comment_review",
+    "info": {
+      "displayName": "commentReview",
+      "icon": "write"
+    },
+    "options": {},
+    "attributes" : {
+        "review-by": {
+            "type" : "string",
+            "required": false
+        },
+        "comment": {
+            "type": "ritchText",
+            "maxLength": 250
+        }
+    }
+}

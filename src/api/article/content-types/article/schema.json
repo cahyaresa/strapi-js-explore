@@ -45,6 +45,9 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.seo"
+    },
+    "planToPublishAt": {
+      "type": "datetime"
     }
   }
 }
