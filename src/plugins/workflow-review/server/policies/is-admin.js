@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = async (policyContext, config, { strapi }) => {
     console.log(policyContext);
     if (policyContext.state.user.role.name === 'Administrator') {

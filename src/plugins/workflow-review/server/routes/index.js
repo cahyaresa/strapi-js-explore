@@ -12,7 +12,7 @@ module.exports = [
     path: '/all-article',
     handler: 'myController.getAllArticle',
     config: {
-      // polices: ['isAdmin']
+      polices: ['isAdmin']
     }
   }
 ];
