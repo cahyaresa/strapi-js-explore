@@ -10,7 +10,6 @@ import pluginId from '../../pluginId';
 import { BaseHeaderLayout, Box, Button, ContentLayout, EmptyStateLayout, Flex } from '@strapi/design-system';
 import { EmptyDocuments, Write } from '@strapi/icons';
 import ListArticle from '../../components/list-article';
-import RightSideComponent from '../../components/RightSideComponent';
 
 const HomePage = () => {
   const [reviewData, setReviewData] = React.useState([]);
@@ -42,7 +41,6 @@ const HomePage = () => {
             <Flex direction="column" alignItems="start" gap={6}>
 
               <p>HAlo in test title section</p>
-              <RightSideComponent />
 
             </Flex>
           </Box>

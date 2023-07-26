@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_shared_workflows",
+    "info": {
+      "displayName": "workflow",
+      "icon": "write"
+    },
+    "options": {},
+    "attributes": {
+      "commentReview": {
+        "type": "component",
+        "repeatable": true,
+        "component": "shared.comment-review"
+      },
+      
+      "status": {
+        "required": true,
+        "type": "enumeration",
+        "enum": [
+          "Todo",
+          "Asking-for-review",
+          "In-Review",
+          "Ready-to-publish"
+        ]
+      }
+    }
+  }

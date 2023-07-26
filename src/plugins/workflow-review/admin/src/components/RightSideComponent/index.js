@@ -1,14 +1,17 @@
 import React from 'react';
 
 import { Box } from '@strapi/design-system';
-// import { useCMEditViewDataManager } from '@strapi/helper-plugin';
+
+// @ts-ignore
+import { useCMEditViewDataManager } from '@strapi/helper-plugin';
 
 
 import _ from 'lodash';
 import ActionSet from './ActionSet';
 
 const RightSideComponent = () => {
-
+  const { modifiedData } = useCMEditViewDataManager();
+  if(modifiedData.hasOwnProperty('seo')){
     return (
       <Box
         background="neutral0"
@@ -23,6 +26,8 @@ const RightSideComponent = () => {
         <ActionSet /> 
       </Box>
     );
+  }
+    return<></>;
   
 };
 
