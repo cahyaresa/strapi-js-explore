@@ -48,6 +48,14 @@
     },
     "planToPublishAt": {
       "type": "datetime"
+    },
+    "planToUnpublishedAt": {
+      "type": "datetime"
+    },
+    "activeArticle": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

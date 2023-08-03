@@ -11,7 +11,7 @@ import ActionSet from './ActionSet';
 
 const RightSideComponent = () => {
   const { modifiedData } = useCMEditViewDataManager();
-  if(modifiedData.hasOwnProperty('seo')){
+  if (modifiedData.hasOwnProperty('seo')) {
     return (
       <Box
         background="neutral0"
@@ -23,12 +23,12 @@ const RightSideComponent = () => {
         paddingTop={6}
         shadow="tableShadow"
       >
-        <ActionSet /> 
+        <ActionSet />
       </Box>
     );
   }
-    return<></>;
-  
+  return <></>;
+
 };
 
 export default RightSideComponent;

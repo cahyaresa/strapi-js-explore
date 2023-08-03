@@ -31,7 +31,7 @@ module.exports = {
           });
 
           // console.log("entryS", entries.map((entry) => entry.branch.id));
-          // console.log("user", user);
+          // console.log("user", user.roles);
           return {
             "branch.id": {
               $in: entries.map((entry) => entry.branch.id)
