@@ -30,6 +30,7 @@ module.exports = {
             }
           });
 
+
           // console.log("entryS", entries.map((entry) => entry.branch.id));
           // console.log("user", user.roles);
           return {
@@ -38,7 +39,7 @@ module.exports = {
             }
           }
 
-          // return user.email.includes(".com")
+          // return user.email.includes("dso")
         }
       }
     ]

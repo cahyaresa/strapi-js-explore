@@ -4,7 +4,8 @@
   "info": {
     "singularName": "branch",
     "pluralName": "branches",
-    "displayName": "branch"
+    "displayName": "branch",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "code": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "reviewers": {
       "type": "relation",

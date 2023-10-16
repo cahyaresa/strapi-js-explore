@@ -38,6 +38,7 @@ export default {
   },
 
   bootstrap(app) {
+    console.log(app);
     app.injectContentManagerComponent('editView', 'right-links', {
       name: 'RightSideComponent',
       Component: RightSideComponent,
